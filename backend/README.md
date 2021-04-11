@@ -38,11 +38,3 @@ python main.py
 ```
 deactivate
 ```
-
-
-
-## 7.仮想実行環境を離脱する
-```
-deactivate
-```
-```
