@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build_browserify_user": "browserify ./script/user.js -o js/user.js",
     "build_browserify_create_user": "browserify ./script/create_user.js -o js/create_user.js",
-    "build_browserify":"npm run build_browserify_user & npm run build_browserify_create_user",
+    "build_browserify": "npm run build_browserify_user & npm run build_browserify_create_user",
     "dev": "npm run build_browserify & node index.js "
   },
   "author": "",
@@ -17,5 +17,18 @@
     "finalhandler": "^1.1.2",
     "jquery": "^3.6.0",
     "router": "^1.3.5"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "csswring": "^7.0.0",
+    "fs": "0.0.1-security",
+    "gulp": "^4.0.2",
+    "gulp-ejs": "^5.1.0",
+    "gulp-postcss": "^9.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "htmlmin": "0.0.7",
+    "postcss": "^8.2.10",
+    "postcss-flexbugs-fixes": "^5.0.2"
   }
 }

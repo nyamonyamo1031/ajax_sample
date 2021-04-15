@@ -6,21 +6,21 @@ let $ = require('jquery');
 // 引数に対してプラス1するだけの関数
 // アロー関数の書き方
 //変数の中に関数を入れるのは変わらない
-const func_add_one = (number) =>{
-    console.log("number*",number)
-    console.log("number+1*",number+1)
-    return number+1
+const func_add_one = (number) => {
+    console.log("number*", number)
+    console.log("number+1*", number + 1)
+    return number + 1
 }
 
 //読み込んだら即実行意味
-$(function(){
+$(function () {
     $.ajax({
         url: 'http://localhost:5000/user',
         type: 'GET',
         dataType: 'json'
-    }).done(function(data){
+    }).done(function (data) {
         /* 通信成功時 */
-        for (let i in data){
+        for (let i in data) {
             //こうゆう時にテンプレートエンジン使いたいな。
             console.log(`data:${data}`)
             console.log(`i:${i}`)
@@ -35,8 +35,8 @@ $(function(){
             $(`.user_${key_count}`).append(`<div class="age">${data[i].age}</div>`);
         }
         //alert('通信成功!');
-        
-    }).fail(function(jqXHR, textStatus, errorThrown){
+
+    }).fail(function (jqXHR, textStatus, errorThrown) {
         /* 通信失敗時 */
 
         console.log("ajax通信に失敗しました");
@@ -44,4 +44,5 @@ $(function(){
         console.log(`textStatus     :${textStatus}`);    // タイムアウト、パースエラー
         console.log(`errorThrown    :${errorThrown}`); // 例外情報
         console.log(`URL            :${url}`);
+    })
 })
