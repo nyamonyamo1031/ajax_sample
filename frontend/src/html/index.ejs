@@ -1,15 +1,16 @@
-<% let pageData={ pageTitle: "お問い合わせ" } %>
+<% let pageData={ pageKind: "top" } %>
 
   <!DOCTYPE html>
   <html lang="ja">
-  <%- include('./_partial/head', pageData) %>
+    <%- include('./_partial/head', pageData) %>
     <body>
       <div class="page">
+         <!-- headerの読み込み -->
+        <%- include('./_partial/header') %>
         <div id="user">
-
+          <p>これはTOPページです</p>
         </div>
       </div>
       <p><a href="./create_user">新規会員を作成する</a></p>
-
     </body>
   </html>

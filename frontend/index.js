@@ -1,5 +1,5 @@
 // Node.js の http モジュールを読み込む
-const http = require('http'); // >>> exspress webフレームワーク 
+const http = require('http'); 
 const fs = require('fs');
 const Router = require('router');
 const finalhandler = require('finalhandler');
@@ -8,25 +8,22 @@ const router = Router();
 
  let indexHandler =(req,res) =>{
     res.setHeader('Content-Type', 'text/html; charset=utf-8')
-    html = fs.readFileSync('./template/index.html');
+    // ejsをhtmlに変換したファイルを読み込む
+    html = fs.readFileSync('./dist/html/index.html');
     res.end(html);
 } 
-let userHandler =(req,res) =>{
+let serviceHandler =(req,res) =>{
     res.setHeader('Content-Type', 'text/html; charset=utf-8')
-    html = fs.readFileSync('./template/user.html');
+    // ejsをhtmlに変換したファイルを読み込む
+    html = fs.readFileSync('./dist/html/service.html');
     res.end(html);
-}
+} 
+
 let userCreateHandler =(req,res) =>{
     res.setHeader('Content-Type', 'text/html; charset=utf-8')
-    html = fs.readFileSync('./template/create_user.html');
+    html = fs.readFileSync('./dist/html/create_user.html');
     res.end(html);
 }
-let userItemHandler = (req,res) =>{
-    res.setHeader('Content-Type','text/html; charset=utf-8')
-    html = fs.readFileSync('./template/userItem.html');
-    res.end(html)
-}
-
 //静的ファイルを返すハンドラ
 let staicHandler = (req,res) =>{
     let kind = req.url.split("/")[1]
@@ -41,8 +38,7 @@ let staicHandler = (req,res) =>{
 //ルーティング処理
 // TODO:別ファイルに記載する
 router.get('/',indexHandler)
-router.get('/user',userHandler)
-router.get('/user/:path',userItemHandler)
+router.get('/service',serviceHandler)
 router.get('/create_user',userCreateHandler)
 router.get('/js/:path',staicHandler)
 router.get('/css/:path',staicHandler)

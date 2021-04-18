@@ -1,6 +1,7 @@
-<% let pagetitle %>
+<% let pagekind %>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width" , initial-scale=1.0>
-    <title><%= pageTitle %> - hogehoge株式会社</title>
+    <title><%- config.pageKind[pageKind].title %></title>
+    <meta name="description" content="<%= config.pageKind[pageKind].description %>" />
   </head>

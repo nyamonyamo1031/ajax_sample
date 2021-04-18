@@ -10888,6 +10888,9 @@ return jQuery;
 let $ = require('jquery');
 
 //読み込んだら即実行意味
+//バリデーションを作成
+//検索例 jquery input バリデーション
+//valm関数の値が空だったら、エラー表示
 $(function () {
     $("#submit").on('click', function () {
         console.log("submitされました。")

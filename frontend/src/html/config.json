@@ -1,6 +1,19 @@
 {
-  "author": "chihiro",
-  "title": "タイトルのサンプルです",
-  "description": "説明文のサンプルです",
-  "public": "http://sample.sample"
+    "pageKind":{
+      "top":{
+        "title": "タイトルのサンプルです:top",
+        "description": "説明文のサンプルです:top",
+        "public": "http://sample.sample"
+      },
+      "service":{
+        "title": "タイトルのサンプルです:service",
+        "description": "説明文のサンプルです:service",
+        "public": "http://sample.sample"
+      },
+      "user_create":{
+        "title": "タイトルのサンプルです:user_create",
+        "description":"説明文のサンプルです:user_create",
+        "public": "http://sample.sample"
+      }
+    }
 }
