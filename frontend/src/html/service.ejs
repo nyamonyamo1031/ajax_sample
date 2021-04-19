@@ -1,0 +1,14 @@
+<% let pageData={ pageKind: "service" } %>
+
+  <!DOCTYPE html>
+  <html lang="ja">
+    <%- include('./_partial/head', pageData) %>
+    <body>
+      <div class="page">
+         <!-- headerの読み込み -->
+         <%- include('./_partial/header') %>
+         <p>これはserviceページです</p>
+      </div>
+      <p><a href="./create_user">service</a></p>
+    </body>
+  </html>
